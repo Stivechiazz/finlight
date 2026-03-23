@@ -23,11 +23,12 @@ interface Companion {
 // helper function (you must define this somewhere)
 const getSubjectColor = (subject: string) => {
   const colors: Record<string, string> = {
-    math: "#FFDA6E",
-    science: "#E5D0FF",
-    coding: "#FFC8E4",
-    language: "#BDE7FF",
-    history: "#FFECC8",
+    financial_literacy: "#0EA5E9",
+    investing: "#059669",
+    accounting: "#D4AF37",
+    banking: "#7C3AED",
+    cryptocurrency: "#EC4899",
+    entrepreneurship: "#F97316",
   };
 
   return colors[subject] || "#eee";
@@ -86,9 +87,7 @@ const CompanionsList = ({
               </TableCell>
 
               <TableCell>
-                <div className="subject-badge w-fit">
-                  {subject}
-                </div>
+                <div className="subject-badge w-fit">{subject}</div>
 
                 <div
                   className="flex items-center justify-center rounded-lg w-fit p-2 md:hidden"
@@ -108,12 +107,15 @@ const CompanionsList = ({
               <TableCell>
                 <div className="fle items.center gap-2 w-full justify-end">
                   <p className="text-2xl">
-                    {duration} {' '}
-                    <span className="max-md:hidden">mins</span>
-                    </p>
-                    <Image src="../public/icons/clock.svg" alt="minutes" width={14} height={14} className="md:hidden">
-
-                    </Image>
+                    {duration} <span className="max-md:hidden">mins</span>
+                  </p>
+                  <Image
+                    src="../public/icons/clock.svg"
+                    alt="minutes"
+                    width={14}
+                    height={14}
+                    className="md:hidden"
+                  ></Image>
                 </div>
               </TableCell>
             </TableRow>

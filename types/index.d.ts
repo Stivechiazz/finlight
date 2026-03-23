@@ -1,20 +1,12 @@
-// type User = {
-//   name: string;
-//   email: string;
-//   image?: string;
-//   accountId: string;
-// };
+
 
 enum Subject {
-  maths = "maths",
-  language = "language",
-  science = "science",
-  history = "history",
-  coding = "coding",
-  geography = "geography",
-  economics = "economics",
-  finance = "finance",
-  business = "business",
+financial_literacy = "financial_literacy",
+investing = "investing",
+accounting = "accounting",
+banking = "banking",
+cryptocurrency = "cryptocurrency",
+entrepreneurship = "entrepreneurship",
 }
 
 type Companion = Models.DocumentList<Models.Document> & {
@@ -26,7 +18,7 @@ type Companion = Models.DocumentList<Models.Document> & {
   bookmarked: boolean;
 };
 
-interface CreateCompanion {
+ interface CreateCompanion {
   name: string;
   subject: string;
   topic: string;
