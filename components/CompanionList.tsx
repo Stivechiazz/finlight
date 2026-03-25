@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn, getSubjectColor } from "@/lib/utils";
 import Image from "next/image";
 
 import {
@@ -13,26 +13,13 @@ import {
 import Link from "next/link";
 
 interface Companion {
-  id: number;
+  id: string;
   subject: string;
   topic: string;
   name: string;
   duration: string;
 }
 
-// helper function (you must define this somewhere)
-const getSubjectColor = (subject: string) => {
-  const colors: Record<string, string> = {
-    financial_literacy: "#0EA5E9",
-    investing: "#059669",
-    accounting: "#D4AF37",
-    banking: "#7C3AED",
-    cryptocurrency: "#EC4899",
-    entrepreneurship: "#F97316",
-  };
-
-  return colors[subject] || "#eee";
-};
 
 interface CompanionsListProps {
   title: string;

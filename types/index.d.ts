@@ -73,3 +73,18 @@ interface CompanionComponentProps {
   voice: string;
   style: string;
 }
+
+// // // helper function (you must define this somewhere)
+// export const getSubjectColor = (subject: string) => {
+//   const colors: Record<string, string> = {
+//     financial_literacy: "#0EA5E9",
+//     investing: "#059669",
+//     accounting: "#D4AF37",
+//     banking: "#7C3AED",
+//     cryptocurrency: "#EC4899",
+//     entrepreneurship: "#F97316",
+//   };
+
+//   return colors[subject] || "#eee";
+// };
+// 
